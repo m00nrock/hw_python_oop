@@ -83,6 +83,7 @@ class CashCalculator(Calculator):
         free_cash = self.balance()
         currency_name, rate = self.CURRENCIES[currency]
         free_cash_currency = round(free_cash / rate, 2)
+
         if free_cash == 0:
             return self.NO_MONEY
         elif free_cash > 0:
